@@ -3,11 +3,7 @@ import React, { useState, useEffect } from "react";
 import { navAnim, navSubItem } from "./anim/navAnim";
 
 // Data navigasi tidak berubah
-const navItems = [
-  { name: "About", href: "#about" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "Contact", href: "#contact" },
-];
+const navItems = [{ name: "About" }, { name: "Gallery" }, { name: "Contact" }];
 
 const Navbar = () => {
   // State untuk show/hide navbar saat scroll
@@ -51,7 +47,6 @@ const Navbar = () => {
     variants,
   });
 
-
   return (
     <motion.div
       className={`fixed w-full top-0 z-50 transition-transform duration-300 ease-in-out ${
@@ -71,7 +66,7 @@ const Navbar = () => {
           {/* BAGIAN ATAS: PEMICU/TRIGGER MENU */}
           <div className="flex justify-center items-center py-1.5 px-6">
             <button onClick={() => handleClick("#hero")}>
-              <span className="text-2xl font-black tracking-widest text-gray-100">
+              <span className="text-2xl font-black tracking-widest text-inherit">
                 Archa Log
               </span>
             </button>
@@ -99,7 +94,11 @@ const Navbar = () => {
           {/* BAGIAN BAWAH: KONTEN SUBMENU YANG BISA MEMANJANG */}
           <AnimatePresence>
             {isMenuOpen && (
-              <motion.div key="submenu" className="overflow-hidden" {...anim(navSubItem)}>
+              <motion.div
+                key="submenu"
+                className="overflow-hidden"
+                {...anim(navSubItem)}
+              >
                 {/* Daftar Submenu */}
                 <ul className="pb-4 pt-1">
                   {navItems.map((item) => (
@@ -108,7 +107,7 @@ const Navbar = () => {
                         onClick={() => {
                           setIsMenuOpen(false);
                           setTimeout(() => {
-                            handleClick(item.href);
+                            handleClick(`#${item.name.toLowerCase()}`);
                           }, 350);
                         }}
                         className="block w-full text-sm text-gray-800 py-2 hover:bg-black/10 transition-colors duration-200"

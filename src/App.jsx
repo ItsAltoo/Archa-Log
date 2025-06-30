@@ -1,7 +1,7 @@
 import React from "react";
-import Hero from "./pages/Hero";
+import Hero from "./pages/Hero/Hero";
 import Navbar from "./components/Navbar";
-import About from "./pages/About";
+import About from "./pages/About/About";
 
 const App = () => {
   return (
