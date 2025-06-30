@@ -3,5 +3,12 @@
 
 :root {
   --font: "Inter Tight", sans-serif;
+  --primary-color: hsl(32 100% 60.9%);
+  --secondary-color: hsl(0, 0%, 95%);
+
+
+  scroll-behavior: smooth;
+  color: var(--secondary-color);
   font-family: var(--font);
+  background-color: hsl(0, 0%, 10%);
 }
