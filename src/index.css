@@ -1,14 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Caveat:wght@400..700&display=swap");
 @import "tailwindcss";
 
 :root {
   --font: "Inter Tight", sans-serif;
-  --primary-color: hsl(32 100% 60.9%);
-  --secondary-color: hsl(0, 0%, 95%);
+  --font-color: hsl(0, 0%, 95%);
 
 
   scroll-behavior: smooth;
-  color: var(--secondary-color);
+  color: var(--font-color);
   font-family: var(--font);
   background-color: hsl(0, 0%, 10%);
+}
+
+@theme {
+  --color-primary-100: hsl(38 87% 53%);
+  --color-primary-200: hsl(38 87% 43%);
+  --color-primary-300: hsl(38 87% 33%);
+
+  --color-border: hsl(0 0% 45%);
+  --color-font-100: hsl(0, 0%, 95%);
+  --color-font-200: hsl(0, 0%, 80%);
+
+  --font-title : "Caveat", cursive;
 }

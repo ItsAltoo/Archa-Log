@@ -6,7 +6,9 @@ const Hero = () => {
     <>
       <div className="h-screen overflow-hidden relative ">
         <section className="">
-          <h1>Hero</h1>
+          <div className="">
+            <h1 className="">Archa Log</h1>
+          </div>
           <div className="flex justify-center items-center h-screen absolute -right-60 -bottom-28">
             <RotatingCards />
           </div>

@@ -55,28 +55,21 @@ const Navbar = () => {
       {...anim(navAnim)}
     >
       <div className="flex justify-center">
-        {/*
-          STRUKTUR UTAMA NAVIGASI GAYA AKORDEON
-          - flex-col: Membuat item di dalamnya tersusun vertikal.
-          - rounded-b-[40px]: Tetap dipertahankan.
-          - w-[...]: Lebar responsif dikembalikan.
-          - transition-all: Agar perubahan ukuran (padding) terlihat mulus.
-        */}
-        <nav className="flex flex-col bg-amber-500 w-[90%] md:w-[70%] lg:w-[30%] rounded-b-[40px] shadow-lg transition-all duration-300">
+        <nav className="flex flex-col bg-primary-100 w-[90%] md:w-[70%] lg:w-[30%] rounded-b-[40px] inset-shadow-sm inset-shadow-black transition-all duration-300">
           {/* BAGIAN ATAS: PEMICU/TRIGGER MENU */}
           <div className="flex justify-center items-center py-1.5 px-6">
             <button onClick={() => handleClick("#hero")}>
-              <span className="text-2xl font-black tracking-widest text-inherit">
+              <span className="text-4xl font-extrabold tracking-widest cursor-pointer font-title text-shadow-lg/20">
                 Archa Log
               </span>
             </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="flex items-center text-xl font-bold text-gray-800 focus:outline-none"
+              className="flex items-center text-xl font-bold text-gray-800 focus:outline-none cursor-pointer hover:scale-125 transition delay-100"
             >
               {/* Ikon panah akan berputar sesuai state 'isMenuOpen' */}
               <svg
-                className={`ml-2 w-5 h-5 transition-transform duration-300 ${
+                className={`ml-2 w-8 h-8 transition-transform duration-300 ${
                   isMenuOpen ? "rotate-180" : "rotate-0"
                 }`}
                 fill="currentColor"
@@ -110,7 +103,7 @@ const Navbar = () => {
                             handleClick(`#${item.name.toLowerCase()}`);
                           }, 350);
                         }}
-                        className="block w-full text-sm text-gray-800 py-2 hover:bg-black/10 transition-colors duration-200"
+                        className="block w-full text-sm text-amber-100 py-2 hover:bg-black/10 transition-colors duration-200 cursor-pointer text-shadow-lg/20"
                       >
                         {item.name}
                       </button>

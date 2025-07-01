@@ -5,7 +5,6 @@ import {
   useAnimationFrame,
 } from "framer-motion";
 import { useRef } from "react";
-import { Img } from "react-image";
 
 const RADIUS = 100;
 
@@ -26,8 +25,33 @@ const RotatingCards = () => {
     angle.set(angle.get() + delta * 0.0003); // per frame update (kecepatan bisa diubah)
   });
 
+  const anim = (variants) => ({
+    initial: "initial",
+    animate: "enter",
+    exit: "exit",
+    variants,
+  });
+
+  const cardAnim = {
+    initial: {
+      opacity: 0,
+      scale: 0,
+    },
+    enter: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: [0.68, -0.6, 0.32, 1.6],
+      },
+    },
+  };
+
   return (
-    <div className="flex items-center justify-center ">
+    <motion.div
+      className="flex items-center justify-center"
+      {...anim(cardAnim)}
+    >
       <div className="relative md:w-[300px] md:h-[300px] ">
         {Images.map((_, i) => {
           const offset = (i / Images.length) * 2 * Math.PI;
@@ -42,17 +66,17 @@ const RotatingCards = () => {
           });
 
           return (
-            <motion.div
+            <motion.Img
               key={i}
               style={{ x, y, scale }}
-              className="absolute md:w-20 md:h-32 bg-gray-300 rounded-xl shadow-lg flex items-center justify-center md:scale-200 "
-            >
-              <Img src={_.src} alt={_.name} className=""/>
-            </motion.div>
+              className={`absolute md:w-20 md:h-32 rounded-xl shadow-lg flex items-center justify-center md:scale-200 brightness-95 border border-border `}
+              src={_.src}
+              alt={_.name}
+            />
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
