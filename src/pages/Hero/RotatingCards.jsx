@@ -5,14 +5,15 @@ import {
   useAnimationFrame,
 } from "framer-motion";
 import { useRef } from "react";
+import { anim } from "../../lib/animate";
 
 const RADIUS = 100;
 
 const Images = [
-  { name: "Picture_1", src: "./assets/1.jpg" },
-  { name: "Picture_2", src: "./assets/2.jpg" },
-  { name: "Picture_3", src: "./assets/3.jpg" },
-  { name: "Picture_4", src: "./assets/4.jpg" },
+  { name: "Picture_1", src: "./assets/Hero/card/1.jpg" },
+  { name: "Picture_2", src: "./assets/Hero/card/2.jpg" },
+  { name: "Picture_3", src: "./assets/Hero/card/3.jpg" },
+  { name: "Picture_4", src: "./assets/Hero/card/4.jpg" },
 ];
 
 const RotatingCards = () => {
@@ -23,13 +24,6 @@ const RotatingCards = () => {
     const delta = t - baseTime.current;
     baseTime.current = t;
     angle.set(angle.get() + delta * 0.0003); // per frame update (kecepatan bisa diubah)
-  });
-
-  const anim = (variants) => ({
-    initial: "initial",
-    animate: "enter",
-    exit: "exit",
-    variants,
   });
 
   const cardAnim = {
@@ -69,7 +63,7 @@ const RotatingCards = () => {
             <motion.Img
               key={i}
               style={{ x, y, scale }}
-              className={`absolute md:w-20 md:h-32 rounded-xl shadow-lg flex items-center justify-center md:scale-200 brightness-95 border border-border `}
+              className={`absolute md:w-20 md:h-32 rounded-xl flex items-center justify-center md:scale-200 brightness-75 border border-border`}
               src={_.src}
               alt={_.name}
             />

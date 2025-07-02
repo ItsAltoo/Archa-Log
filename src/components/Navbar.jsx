@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import React, { useState, useEffect } from "react";
 import { navAnim, navSubItem } from "./anim/navAnim";
+import {anim} from "../lib/animate"
 
 // Data navigasi tidak berubah
 const navItems = [{ name: "About" }, { name: "Gallery" }, { name: "Contact" }];
@@ -39,14 +40,6 @@ const Navbar = () => {
     }
   };
 
-  // Fungsi untuk animasi (tidak ada perubahan)
-  const anim = (variants) => ({
-    initial: "initial",
-    animate: "enter",
-    exit: "exit",
-    variants,
-  });
-
   return (
     <motion.div
       className={`fixed w-full top-0 z-50 transition-transform duration-300 ease-in-out ${
@@ -59,7 +52,7 @@ const Navbar = () => {
           {/* BAGIAN ATAS: PEMICU/TRIGGER MENU */}
           <div className="flex justify-center items-center py-1.5 px-6">
             <button onClick={() => handleClick("#hero")}>
-              <span className="text-4xl font-extrabold tracking-widest cursor-pointer font-title text-shadow-lg/20">
+              <span className="text-4xl font-extrabold tracking-widest cursor-pointer font-logo text-shadow-lg/20">
                 Archa Log
               </span>
             </button>
@@ -103,7 +96,7 @@ const Navbar = () => {
                             handleClick(`#${item.name.toLowerCase()}`);
                           }, 350);
                         }}
-                        className="block w-full text-sm text-amber-100 py-2 hover:bg-black/10 transition-colors duration-200 cursor-pointer text-shadow-lg/20"
+                        className="block w-full text-sm tracking-widest text-amber-100 py-2 hover:bg-black/10 transition-colors duration-200 cursor-pointer text-shadow-lg/20"
                       >
                         {item.name}
                       </button>

@@ -21,5 +21,6 @@
   --color-font-100: hsl(0, 0%, 95%);
   --color-font-200: hsl(0, 0%, 80%);
 
-  --font-title : "Caveat", cursive;
+  --font-logo : "Caveat", cursive;
+  --font-title : "Markazi Text", serif;
 }
