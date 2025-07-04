@@ -9,7 +9,7 @@
   scroll-behavior: smooth;
   color: var(--font-color);
   font-family: var(--font);
-  background-color: hsl(0, 0%, 10%);
+  background-color: hsl(0, 0%, 5%);
 }
 
 @theme {
@@ -21,6 +21,23 @@
   --color-font-100: hsl(0, 0%, 95%);
   --color-font-200: hsl(0, 0%, 80%);
 
+  --color-background: hsl(0, 0%, 5%);
+
+
   --font-logo : "Caveat", cursive;
   --font-title : "Markazi Text", serif;
+}
+
+::-webkit-scrollbar {
+  width: 0;         
+  height: 0;          
+  background: transparent; 
+}
+
+html {
+  scrollbar-width: none;  
+}
+
+body {
+  -ms-overflow-style: none; 
 }

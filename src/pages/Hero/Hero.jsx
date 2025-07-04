@@ -1,7 +1,7 @@
 import React from "react";
 import RotatingCards from "./RotatingCards";
 import { motion } from "framer-motion";
-import { anim } from "../../lib/animate";
+import { anim } from "../../helper/animate";
 import Background from "./Background";
 import { headingAnim, subHeadAnim } from "./anim/animate";
 
@@ -27,7 +27,7 @@ const Hero = () => {
             </motion.p>
           </div>
 
-          <div className="flex justify-center  items-center h-screen absolute -right-60 -bottom-28">
+          <div className="hidden md:flex justify-center  items-center h-screen absolute -right-60 -bottom-28">
             <RotatingCards />
           </div>
         </section>

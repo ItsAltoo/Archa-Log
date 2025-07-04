@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import React, { useState, useEffect } from "react";
 import { navAnim, navSubItem } from "./anim/navAnim";
-import {anim} from "../lib/animate"
+import {anim} from "../helper/animate"
 
 // Data navigasi tidak berubah
 const navItems = [{ name: "About" }, { name: "Gallery" }, { name: "Contact" }];

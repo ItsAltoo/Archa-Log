@@ -5,9 +5,10 @@ import {
   useAnimationFrame,
 } from "framer-motion";
 import { useRef } from "react";
-import { anim } from "../../lib/animate";
+import { anim } from "../../helper/animate";
+import { cardAnim } from "./anim/animate";
 
-const RADIUS = 100;
+const RADIUS = 120;
 
 const Images = [
   { name: "Picture_1", src: "./assets/Hero/card/1.jpg" },
@@ -25,21 +26,6 @@ const RotatingCards = () => {
     baseTime.current = t;
     angle.set(angle.get() + delta * 0.0003); // per frame update (kecepatan bisa diubah)
   });
-
-  const cardAnim = {
-    initial: {
-      opacity: 0,
-      scale: 0,
-    },
-    enter: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        ease: [0.68, -0.6, 0.32, 1.6],
-      },
-    },
-  };
 
   return (
     <motion.div

@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { anim } from "../../lib/animate";
+import { anim } from "../../helper/animate";
 import { bgAnim } from "./anim/animate";
 
 const Images = [
@@ -37,14 +37,6 @@ const Background = () => {
             style={{ backgroundImage: `url(${Images[current].url})` }}
           >
             <div className="absolute inset-0 bg-black/70" />
-            <div className="relative z-10 flex flex-col justify-center items-start h-full px-10 md:px-20 text-white">
-              <h1 className="text-4xl md:text-6xl font-bold text-[#EFA21D]">
-                {Images[current].heading}
-              </h1>
-              <p className="mt-4 max-w-xl text-sm md:text-base text-gray-100">
-                {Images[current].description}
-              </p>
-            </div>
           </motion.div>
         </AnimatePresence>
       </div>
