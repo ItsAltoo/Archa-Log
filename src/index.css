@@ -28,6 +28,8 @@
   --font-title : "Markazi Text", serif;
 }
 
+/* remove scroll bar */
+/* 
 ::-webkit-scrollbar {
   width: 0;         
   height: 0;          
@@ -40,4 +42,4 @@ html {
 
 body {
   -ms-overflow-style: none; 
-}
+} */

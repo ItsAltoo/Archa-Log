@@ -10,7 +10,7 @@ const App = () => {
       <section id="hero">
         <Hero />
       </section>
-      <section id="about">
+      <section id="about" className="overflow-hidden">
         <About />
       </section>
     </>
