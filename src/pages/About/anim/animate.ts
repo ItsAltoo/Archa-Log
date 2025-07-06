@@ -1,7 +1,7 @@
 export const CloseDown = {
-  initial: { y: -10 },
+  initial: { y: 0 },
   enter: {
-    y: "400vh",
+    y: '100%',
     transition: {
       duration: 1,
       ease: [0.76, 0, 0.24, 1],
