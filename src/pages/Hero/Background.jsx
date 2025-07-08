@@ -4,10 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { anim } from "../../helper/animate";
 import { bgAnim } from "./anim/animate";
 
+
 const Images = [
-  { name: "background_1", url: "./assets/Hero/background/bg_1.jpg" },
-  { name: "background_2", url: "./assets/Hero/background/bg_2.jpg" },
-  { name: "background_3", url: "./assets/Hero/background/bg_3.jpg" },
+  { name: "background_1", url: "./assets/Hero/background/bg_1.webp" },
+  { name: "background_2", url: "./assets/Hero/background/bg_2.webp" },
+  { name: "background_3", url: "./assets/Hero/background/bg_3.webp" },
 ];
 
 const Background = () => {

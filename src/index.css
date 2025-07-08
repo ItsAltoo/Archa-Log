@@ -29,17 +29,17 @@
 }
 
 /* remove scroll bar */
-/* 
-::-webkit-scrollbar {
+
+/* ::-webkit-scrollbar {
   width: 0;         
   height: 0;          
   background: transparent; 
-}
+} */
 
-html {
+/* html {
   scrollbar-width: none;  
-}
+} */
 
-body {
+/* body {
   -ms-overflow-style: none; 
 } */

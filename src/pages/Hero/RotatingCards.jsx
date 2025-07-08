@@ -11,10 +11,10 @@ import { cardAnim } from "./anim/animate";
 const RADIUS = 120;
 
 const Images = [
-  { name: "Picture_1", src: "./assets/Hero/card/1.jpg" },
-  { name: "Picture_2", src: "./assets/Hero/card/2.jpg" },
-  { name: "Picture_3", src: "./assets/Hero/card/3.jpg" },
-  { name: "Picture_4", src: "./assets/Hero/card/4.jpg" },
+  { name: "Picture_1", src: "./assets/Hero/card/1.webp" },
+  { name: "Picture_2", src: "./assets/Hero/card/2.webp" },
+  { name: "Picture_3", src: "./assets/Hero/card/3.webp" },
+  { name: "Picture_4", src: "./assets/Hero/card/4.webp" },
 ];
 
 const RotatingCards = () => {
