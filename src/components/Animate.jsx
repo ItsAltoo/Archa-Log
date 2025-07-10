@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const Animate = ({ children, animate = "SlideUp", delay = 0 }) => {
+const Animate = ({ children, animate = "SlideUp", delay = 0 ,className}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -18,11 +18,11 @@ const Animate = ({ children, animate = "SlideUp", delay = 0 }) => {
     SlideDown: {
       initial: {
         opacity: 0,
-        y: 0,
+        y: -50,
       },
       enter: {
         opacity: 1,
-        y: 100,
+        y: 0,
         transition: {
           duration: 0.6,
           type: "spring",
@@ -75,6 +75,7 @@ const Animate = ({ children, animate = "SlideUp", delay = 0 }) => {
       initial="initial"
       animate={isInView ? "enter" : "initial"}
       variants={selectedAnimation}
+      className={className}
     >
       {children}
     </motion.div>

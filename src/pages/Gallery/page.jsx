@@ -1,6 +1,7 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import React, { useRef } from "react";
 import { dataImages } from "./data";
+import Animate from "../../components/Animate";
 
 const Gallery = () => {
   const ref = useRef();
@@ -14,6 +15,7 @@ const Gallery = () => {
       <div ref={ref} className="relative h-[200vh]">
         <Section1 scrollYProgress={scrollYProgress} />
         <Section2 scrollYProgress={scrollYProgress} />
+        <Section3 />
       </div>
     </>
   );
@@ -59,7 +61,7 @@ export const Section2 = ({ scrollYProgress }) => {
           <div className="columns-2 sm:columns-3 md:columns-5 gap-8 space-y-4">
             {dataImages.map((content, i) => (
               <div key={i}>
-                <div className="overflow-hidden rounded-xl border-2 border-border hover:shadow-lg hover:shadow-primary-100/40 mb-2">
+                <div className="overflow-hidden rounded-xl border-2 border-border hover:shadow-[0_0_8px_hsl(38,87%,53%)] mb-2">
                   <img
                     src={content.src}
                     alt={`img-${i}`}
@@ -72,7 +74,104 @@ export const Section2 = ({ scrollYProgress }) => {
           </div>
         </div>
       </motion.section>
-      <div>hi</div>
+    </>
+  );
+};
+
+export const Section3 = () => {
+  return (
+    <>
+      <div className="h-screen ">
+        <div className="h-1/3 px-20 ">
+          <div className="flex items-end justify-start gap-4 text-2xl tracking-wider font-bold">
+            <Animate delay={0.3} animate="ZoomIn">
+              <p className="w-10 border-3 border-primary-100 text-primary-100 rounded-full flex items-center justify-center ">
+                1
+              </p>
+            </Animate>
+            <Animate delay={0.5} animate="SlideRight" className="text-font-100">
+              Title Images
+            </Animate>
+          </div>
+          <div className="flex  ml-12 mt-3 gap-5 ">
+            <Animate
+              delay={0.8}
+              animate="SlideDown"
+              className="bg-[url('./assets/Gallery/top1.webp')] rounded-2xl border-2 border-border w-72 h-36 bg-cover bg-repeat bg-center hover:shadow-[0_0_8px_hsl(38,87%,53%)]"
+            ></Animate>
+            <Animate
+              delay={1}
+              animate="SlideRight"
+              className="text-font-100 font-light "
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+              at aspernatur quo vitae velit dolorem maiores ut tempore incidunt
+              expedita? Ex quis iusto qui doloribus atque dolores, cumque ipsam
+              unde.
+            </Animate>
+          </div>
+        </div>
+
+        <div className="h-1/3 px-20">
+          <div className="flex items-end justify-end gap-4 text-2xl tracking-wider font-bold">
+            <Animate delay={0.5} animate="SlideRight" className="text-font-100">
+              Title Images
+            </Animate>
+            <Animate delay={0.3} animate="ZoomIn">
+              <p className="w-10 border-3 border-primary-100 text-primary-100 rounded-full flex items-center justify-center ">
+                2
+              </p>
+            </Animate>
+          </div>
+          <div className="flex  ml-12 mt-3 gap-5 ">
+            <Animate
+              delay={1}
+              animate="SlideRight"
+              className="text-font-100 font-light text-end"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+              at aspernatur quo vitae velit dolorem maiores ut tempore incidunt
+              expedita? Ex quis iusto qui doloribus atque dolores, cumque ipsam
+              unde.
+            </Animate>
+            <Animate
+              delay={0.8}
+              animate="SlideDown"
+              className="bg-[url('./assets/Gallery/top2.webp')] rounded-2xl border-2 border-border w-72 h-36 bg-cover bg-repeat bg-center hover:shadow-[0_0_8px_hsl(38,87%,53%)]"
+            ></Animate>
+          </div>
+        </div>
+
+        <div className="h-1/3 px-20">
+          <div className="flex items-end justify-start gap-4 text-2xl tracking-wider font-bold">
+            <Animate delay={0.3} animate="ZoomIn">
+              <p className="w-10 border-3 border-primary-100 text-primary-100 rounded-full flex items-center justify-center ">
+                3
+              </p>
+            </Animate>
+            <Animate delay={0.5} animate="SlideRight" className="text-font-100">
+              Title Images
+            </Animate>
+          </div>
+          <div className="flex  ml-12 mt-3 gap-5 ">
+            <Animate
+              delay={0.8}
+              animate="SlideDown"
+              className="bg-[url('./assets/Gallery/top3.webp')] rounded-2xl border-2 border-border w-72 h-36 bg-cover bg-repeat bg-center hover:shadow-[0_0_8px_hsl(38,87%,53%)]"
+            ></Animate>
+            <Animate
+              delay={1}
+              animate="SlideRight"
+              className="text-font-100 font-light "
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+              at aspernatur quo vitae velit dolorem maiores ut tempore incidunt
+              expedita? Ex quis iusto qui doloribus atque dolores, cumque ipsam
+              unde.
+            </Animate>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

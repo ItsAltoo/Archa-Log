@@ -27,12 +27,12 @@
 }
 
 ::selection {
-  background-color: hsl(38 87% 53%);
+  background-color: var(--color-primary-200);
   color: #ffffff;
 }
 
 ::-moz-selection {
-  background-color: hsl(38 87% 53%);
+  background-color: var(--color-primary-200);
   color: #ffffff;
 }
 
