@@ -5,7 +5,6 @@
   --font: "Inter Tight", sans-serif;
   --font-color: hsl(0, 0%, 95%);
 
-
   scroll-behavior: smooth;
   color: var(--font-color);
   font-family: var(--font);
@@ -23,9 +22,18 @@
 
   --color-background: hsl(0, 0%, 5%);
 
+  --font-logo: "Caveat", cursive;
+  --font-title: "Markazi Text", serif;
+}
 
-  --font-logo : "Caveat", cursive;
-  --font-title : "Markazi Text", serif;
+::selection {
+  background-color: hsl(38 87% 53%);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: hsl(38 87% 53%);
+  color: #ffffff;
 }
 
 /* remove scroll bar */

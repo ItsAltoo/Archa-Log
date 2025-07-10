@@ -1,5 +1,6 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import React, { useRef } from "react";
+import { dataImages } from "./data";
 
 const Gallery = () => {
   const ref = useRef();
@@ -53,12 +54,25 @@ export const Section2 = ({ scrollYProgress }) => {
 
   return (
     <>
-      <motion.section
-        style={{ scale, rotate }}
-        className="relative  w-full h-screen"
-      >
-        <h1>Section 2</h1>
+      <motion.section style={{ scale, rotate }} className="relative w-full">
+        <div className="p-4 bg-background min-h-screen">
+          <div className="columns-2 sm:columns-3 md:columns-5 gap-8 space-y-4">
+            {dataImages.map((content, i) => (
+              <div key={i}>
+                <div className="overflow-hidden rounded-xl border-2 border-border hover:shadow-lg hover:shadow-primary-100/40 mb-2">
+                  <img
+                    src={content.src}
+                    alt={`img-${i}`}
+                    className=" break-inside-avoid hover:scale-105 transition duration-150 ease-in-out"
+                  />
+                </div>
+                <p>{content.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </motion.section>
+      <div>hi</div>
     </>
   );
 };
