@@ -80,7 +80,7 @@ export const Section3 = () => {
             <Animate
               delay={0.8}
               animate="SlideDown"
-              className="bg-[url('./assets/Gallery/top1.webp')] rounded-2xl border-2 border-border w-72 h-36 bg-cover bg-repeat bg-center hover:shadow-[0_0_8px_hsl(38,87%,53%)]"
+              className="bg-[url(./assets/Gallery/top1.webp)] rounded-2xl border-2 border-border w-72 h-36 bg-cover bg-repeat bg-center hover:shadow-[0_0_8px_hsl(38,87%,53%)]"
             ></Animate>
             <Animate
               delay={1}
@@ -128,7 +128,7 @@ export const Section3 = () => {
             <Animate
               delay={0.8}
               animate="SlideDown"
-              className="bg-[url('./assets/Gallery/top2.webp')] rounded-2xl border-2 border-border w-72 h-36 bg-cover bg-repeat bg-center hover:shadow-[0_0_8px_hsl(38,87%,53%)]"
+              className="bg-[url(./assets/Gallery/top2.webp)] rounded-2xl border-2 border-border w-72 h-36 bg-cover bg-repeat bg-center hover:shadow-[0_0_8px_hsl(38,87%,53%)]"
             ></Animate>
           </div>
         </div>
@@ -152,7 +152,7 @@ export const Section3 = () => {
             <Animate
               delay={0.8}
               animate="SlideDown"
-              className="bg-[url('./assets/Gallery/top3.webp')] rounded-2xl border-2 border-border w-72 h-36 bg-cover bg-repeat bg-center hover:shadow-[0_0_8px_hsl(38,87%,53%)]"
+              className="bg-[url(./assets/Gallery/top3.webp)] rounded-2xl border-2 border-border w-72 h-36 bg-cover bg-repeat bg-center hover:shadow-[0_0_8px_hsl(38,87%,53%)]"
             ></Animate>
             <Animate
               delay={1}

@@ -25,7 +25,7 @@ const About = () => {
           />
         </div>
 
-        <div className="bg-[url('./assets/About/bg_1.webp')] h-full w-full bg-cover top-0 right-0 -z-10 absolute bg-black/80 brightness-[20%] grayscale inset-shadow-sm inset-shadow-background/80" />
+        <div className="bg-[url(./assets/About/bg_1.webp)] h-full w-full bg-cover top-0 right-0 -z-10 absolute bg-black/80 brightness-[20%] grayscale inset-shadow-sm inset-shadow-background/80" />
 
         <div className="overflow-hidden absolute inset-0">
         {/* leaf */}
