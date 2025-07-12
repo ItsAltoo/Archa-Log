@@ -24,16 +24,17 @@ const About = () => {
             {...anim(CloseDown)}
           />
         </div>
-        <div className="h-full w-full  top-0 right-0 -z-10 absolute bg-black/80">
-            <img
-              src="./assets/About/bg_1.webp"
-              className="h-full w-full brightness-[20%] grayscale inset-shadow-sm inset-shadow-background/80"
-            />
-          </div>
+        {/* <div className="h-full w-full top-0 right-0 -z-10 absolute bg-black/80">
+          <img
+            src="./assets/About/bg_1.webp"
+            className="h-full w-full brightness-[20%] grayscale inset-shadow-sm inset-shadow-background/80"
+          />
+        </div> */}
+
+        <div style={{backgroundImage : "url(./assets/About/bg_1.webp)"}} className="h-full w-full bg-cover top-0 right-0 -z-10 absolute bg-black/80 brightness-[20%] grayscale inset-shadow-sm inset-shadow-background/80" />
+        
 
         <div className="overflow-hidden absolute inset-0">
-          
-
           {/* leaf */}
           <img
             src=".\assets\About\leaf_ 1.webp"
