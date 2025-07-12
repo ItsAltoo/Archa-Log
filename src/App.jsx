@@ -38,9 +38,9 @@ const App = () => {
       <section id="gallery">
         <Gallery />
       </section>
-      <section id="contact">
+      {/* <section id="contact">
         <Contact/>
-      </section>
+      </section> */}
     </>
   );
 };

@@ -3,21 +3,17 @@ import React, { useState, useEffect } from "react";
 import { navAnim, navSubItem } from "./anim/navAnim";
 import {anim} from "../helper/animate"
 
-// Data navigasi tidak berubah
 const navItems = [{ name: "About" }, { name: "Gallery" }, { name: "Contact" }];
 
 const Navbar = () => {
-  // State untuk show/hide navbar saat scroll
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  // State untuk membuka/menutup menu (sekarang hanya ada satu menu)
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Efek Scroll (tidak ada perubahan, sudah benar)
   useEffect(() => {
     const controlNavbar = () => {
-      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+      if (window.scrollY > lastScrollY && window.scrollY > 60) {
         setShow(false);
       } else {
         setShow(true);
@@ -48,7 +44,7 @@ const Navbar = () => {
       {...anim(navAnim)}
     >
       <div className="flex justify-center">
-        <nav className="flex flex-col bg-primary-100 w-[90%] md:w-[70%] lg:w-[30%] rounded-b-[40px] inset-shadow-sm inset-shadow-black transition-all duration-300">
+        <nav className="flex flex-col bg-primary-100 w-[80%] md:w-[70%] lg:w-[30%] rounded-b-[40px] inset-shadow-sm inset-shadow-black transition-all duration-300">
           {/* BAGIAN ATAS: PEMICU/TRIGGER MENU */}
           <div className="flex justify-center items-center py-1.5 px-6">
             <button onClick={() => handleClick("#hero")}>

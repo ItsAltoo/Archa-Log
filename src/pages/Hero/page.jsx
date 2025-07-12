@@ -11,10 +11,10 @@ const Hero = () => {
     <>
       <div className="h-screen overflow-hidden relative flex">
         <Background />
-        <section className="flex flex-col justify-center ml-20 z-10">
+        <section className="flex flex-col justify-center ml-10 md:ml-20 z-10">
           <div className="max-w-2xl">
             <motion.h1
-              className="font-title text-8xl mb-4 text-primary-100 text-shadow-lg text-shadow-primary-300/60"
+              className="font-title md:text-8xl text-6xl mb-4 text-primary-100 text-shadow-lg text-shadow-primary-300/60"
               {...anim(headingAnim)}
             >
               Archa Log

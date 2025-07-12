@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const Animate = ({ children, animate = "SlideUp", delay = 0 ,className}) => {
+const Animate = ({ children, animate = "SlideUp", delay = 0 ,className,style}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -76,6 +76,7 @@ const Animate = ({ children, animate = "SlideUp", delay = 0 ,className}) => {
       animate={isInView ? "enter" : "initial"}
       variants={selectedAnimation}
       className={className}
+      style={style}
     >
       {children}
     </motion.div>
