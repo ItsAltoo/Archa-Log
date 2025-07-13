@@ -35,8 +35,8 @@ export const Section2 = ({ scrollYProgress }) => {
 
   return (
     <>
-      <motion.section style={{ scale, rotate }} className="relative w-full h-auto">
-        <div className="p-4 bg-background min-h-screen border-zinc-500 border-b-2 mb-8 pb-8 border-dashed">
+      <motion.section style={{ scale, rotate }} className="relative w-full">
+        <div className="p-4 bg-background border-zinc-500 border-b-2 mb-8 pb-8 border-dashed">
           <div className="columns-2 sm:columns-3 md:columns-5 gap-8 space-y-4">
             {dataImages.map((content, i) => (
               <div key={i}>
