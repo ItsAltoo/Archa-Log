@@ -4,7 +4,6 @@ import About from "./pages/About/page";
 import Lenis from "lenis";
 import { useEffect } from "react";
 import Gallery from "./pages/Gallery/page";
-import Contact from "./pages/Contact/page";
 
 const App = () => {
   useEffect(() => {
@@ -38,9 +37,6 @@ const App = () => {
       <section id="gallery">
         <Gallery />
       </section>
-      {/* <section id="contact">
-        <Contact/>
-      </section> */}
     </>
   );
 };

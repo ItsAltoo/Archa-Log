@@ -3,13 +3,12 @@ import { dataImages } from "./data";
 import Animate from "../../components/Animate";
 
 export const Section1 = ({ scrollYProgress }) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 5]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);
 
   return (
     <>
       <motion.section
-        style={{ scale, rotate }}
+        style={{ scale }}
         className="sticky top-0 h-screen w-full flex flex-col items-center justify-center bg-background"
       >
         <div className="absolute h-10 w-10 md:top-1/4 md:right-1/4 top-1/3 right-1/12 border-t-[1px] border-r-[1px]" />
@@ -35,7 +34,7 @@ export const Section2 = ({ scrollYProgress }) => {
   return (
     <>
       <motion.section style={{ scale }} className="relative w-full">
-        <div className="p-4 bg-background border-zinc-500 border-b-2 mb-8 pb-8 border-dashed">
+        <div className="p-4 bg-background border-zinc-500 border-b-2  pb-8 border-dashed">
           <div className="columns-2 sm:columns-3 md:columns-5 gap-8 space-y-4">
             {dataImages.map((content, i) => (
               <div key={i}>
@@ -59,15 +58,13 @@ export const Section2 = ({ scrollYProgress }) => {
 export const Section3 = () => {
   return (
     <>
-      <div className="min-h-screen space-y-20 px-4 md:px-20 py-10">
+      <div className="min-h-screen space-y-20 px-8 md:px-20 py-10 bg-background">
         {/* SECTION 1 */}
         <div className="space-y-6">
           <div className="flex items-end gap-4 text-xl md:text-2xl tracking-wider font-bold">
-            <Animate delay={0.3} animate="ZoomIn">
-              <p className="w-10 h-10 border-2 border-primary-100 text-primary-100 rounded-full flex items-center justify-center">
-                1
-              </p>
-            </Animate>
+            <p className="w-10 h-10 border-2 border-primary-100 text-primary-100 rounded-full flex items-center justify-center">
+              1
+            </p>
             <Animate
               delay={0.5}
               animate="SlideRight"
@@ -110,11 +107,9 @@ export const Section3 = () => {
             >
               Title Images
             </Animate>
-            <Animate delay={0.3} animate="ZoomIn">
-              <p className="w-10 h-10 border-2 border-primary-100 text-primary-100 rounded-full flex items-center justify-center">
-                2
-              </p>
-            </Animate>
+            <p className="w-10 h-10 border-2 border-primary-100 text-primary-100 rounded-full flex items-center justify-center">
+              2
+            </p>
           </div>
 
           <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
@@ -143,11 +138,9 @@ export const Section3 = () => {
         {/* SECTION 3 */}
         <div className="space-y-6">
           <div className="flex items-end gap-4 text-xl md:text-2xl tracking-wider font-bold">
-            <Animate delay={0.3} animate="ZoomIn">
-              <p className="w-10 h-10 border-2 border-primary-100 text-primary-100 rounded-full flex items-center justify-center">
-                3
-              </p>
-            </Animate>
+            <p className="w-10 h-10 border-2 border-primary-100 text-primary-100 rounded-full flex items-center justify-center">
+              3
+            </p>
             <Animate
               delay={0.5}
               animate="SlideRight"

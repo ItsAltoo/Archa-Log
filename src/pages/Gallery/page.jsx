@@ -1,6 +1,7 @@
 import { useScroll } from "framer-motion";
 import React, { useRef } from "react";
 import { Section1, Section2, Section3 } from "./Content";
+import Contact from "../Contact/page";
 
 const Gallery = () => {
   const ref = useRef();
@@ -15,6 +16,7 @@ const Gallery = () => {
         <Section1 scrollYProgress={scrollYProgress} />
         <Section2 scrollYProgress={scrollYProgress} />
         <Section3 />
+        <Contact />
       </div>
     </>
   );
