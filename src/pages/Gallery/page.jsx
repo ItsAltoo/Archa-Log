@@ -11,7 +11,7 @@ const Gallery = () => {
 
   return (
     <>
-      <div ref={ref} className="relative h-[200vh]">
+      <div ref={ref} className="h-[200vh] relative">
         <Section1 scrollYProgress={scrollYProgress} />
         <Section2 scrollYProgress={scrollYProgress} />
         <Section3 />

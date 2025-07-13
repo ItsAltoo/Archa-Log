@@ -31,16 +31,15 @@ export const Section1 = ({ scrollYProgress }) => {
 
 export const Section2 = ({ scrollYProgress }) => {
   const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [5, 0]);
 
   return (
     <>
-      <motion.section style={{ scale, rotate }} className="relative w-full">
+      <motion.section style={{ scale }} className="relative w-full">
         <div className="p-4 bg-background border-zinc-500 border-b-2 mb-8 pb-8 border-dashed">
           <div className="columns-2 sm:columns-3 md:columns-5 gap-8 space-y-4">
             {dataImages.map((content, i) => (
               <div key={i}>
-                <div className="overflow-hidden rounded-xl border-2 border-border hover:shadow-[0_0_8px_hsl(38,87%,53%)] mb-2">
+                <div className=" overflow-hidden rounded-xl border-2 border-border hover:shadow-[0_0_8px_hsl(38,87%,53%)] mb-2 ">
                   <img
                     src={content.src}
                     alt={`img-${i}`}
@@ -69,7 +68,11 @@ export const Section3 = () => {
                 1
               </p>
             </Animate>
-            <Animate delay={0.5} animate="SlideRight" className="text-font-100 font-title">
+            <Animate
+              delay={0.5}
+              animate="SlideRight"
+              className="text-font-100 font-title"
+            >
               Title Images
             </Animate>
           </div>
@@ -100,7 +103,11 @@ export const Section3 = () => {
         {/* SECTION 2 */}
         <div className="space-y-6">
           <div className="flex items-end justify-end gap-4 text-xl md:text-2xl tracking-wider font-bold">
-            <Animate delay={0.5} animate="SlideRight" className="text-font-100 font-title">
+            <Animate
+              delay={0.5}
+              animate="SlideRight"
+              className="text-font-100 font-title"
+            >
               Title Images
             </Animate>
             <Animate delay={0.3} animate="ZoomIn">
@@ -141,7 +148,11 @@ export const Section3 = () => {
                 3
               </p>
             </Animate>
-            <Animate delay={0.5} animate="SlideRight" className="text-font-100 font-title">
+            <Animate
+              delay={0.5}
+              animate="SlideRight"
+              className="text-font-100 font-title"
+            >
               Title Images
             </Animate>
           </div>
