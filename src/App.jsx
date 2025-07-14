@@ -10,7 +10,7 @@ const App = () => {
     const lenis = new Lenis({
       duration: 1.2,
       lerp: 0.6,
-      smoothTouch: true,
+      smoothWheel: true,
     });
 
     function raf(time) {
